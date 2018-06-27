@@ -1,0 +1,132 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>更新数据字典数据</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/bootstrap-table.css}" rel="stylesheet"/>
+    <link th:href="@{/font-awesome/css/font-awesome.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/bootstrap-datetimepicker.css}" rel="stylesheet"/>
+    <link th:href="@{/css/bootstrapValidator.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/fileinput.css}" rel="stylesheet"/>
+    <link th:href="@{/css/fileinput-rtl.css}" rel="stylesheet"/>
+    <link th:href="@{/css/theme.css}" rel="stylesheet"/>
+    <link th:href="@{/css/zTreeStyle/metro.css}" rel="stylesheet"/>
+
+
+    <script th:src="@{/js/sockjs.min.js}"></script>
+    <script th:src="@{/js/stomp.min.js}"></script>
+    <script th:src="@{/js/jquery.js}"></script>
+    <script th:src="@{/js/distpicker/distpicker.data.js}"></script>
+    <script th:src="@{/js/distpicker/distpicker.js}"></script>
+    <script th:src="@{/js/websocket/socketUtil.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/bootstrap/nav/nav.js}"></script>
+    <script th:src="@{/js/bootstrap/tab/bootstrap-tab.js}"></script>
+    <script th:src="@{/js/bootstrap/tree/tree.js}"></script>
+    <script th:src="@{/js/bootstrap/alert/alert.js}"></script>
+    <script th:src="@{/js/bootstrap/table/bootstrap-table.js}"></script>
+    <script th:src="@{/js/bootstrap/date/bootstrap-datetimepicker.js}"></script>
+    <script th:src="@{/js/bootstrap/validator/bootstrapValidator.min.js}"></script>
+    <script th:src="@{/js/bootstrap/upload/fileinput.min.js}"></script>
+    <script th:src="@{/js/bootstrap/upload/plugins/sortable.js}"></script>
+    <script th:src="@{/js/bootstrap/upload/locales/zh.js}"></script>
+    <script th:src="@{/js/bootstrap/upload/theme.js}"></script>
+    <script th:src="@{/js/bootstrap/ztree/jquery.ztree.all-3.5.min.js}"></script>
+    <script th:src="@{/js/bootstrap/checkbox/checkbox.js}"></script>
+    <script th:src="@{/js/bootstrap/radio/radio.js}"></script>
+    <script th:src="@{/js/ajaxutil/ajaxUtil.js}"></script>
+    <script th:src="@{/js/dict/dictUtil.js}"></script>
+    <script th:src="@{/js/bootstrap/date/date.prototype.format.js}"></script>
+    <script th:src="@{/js/bootstrap/util/number.pick.util.js}"></script>
+</head>
+<body>
+<form id="dictForm"  role="form" method="post" action="/dict/update">
+    <input type="hidden" name="id" th:value="${entity.id}" />
+    <div class="form-group" >
+        <label for="type">字典类型:</label>
+        <input type="text" class="form-control" name="type" id="type" th:value="${entity.type}" placeholder="请输入字典类型" />
+    </div>
+    <div class="form-group">
+        <label for="code">字典编码:</label>
+        <input type="text" class="form-control" name="code" id="code" th:value="${entity.code}"  placeholder="请输入字典编码" />
+    </div>
+    <div class="form-group" >
+        <label for="value">字典值:</label>
+        <input type="text" class="form-control" name="value" id="value" th:value="${entity.value}"   placeholder="请输入字典值" />
+    </div>
+    <div class="form-group">
+        <label for="text">字典描述:</label>
+        <input type="text" class="form-control" name="text" id="text"  th:value="${entity.text}"   placeholder="请输入字典描述" />
+    </div>
+    <div class="form-group">
+        <label >前端加载:</label>
+        <label  class='radio-inline'><input type='radio' name='isLoad' value='1'  th:checked="${entity.isLoad} == 1?true:false"   checked="checked"  />允许</label>
+        <label  class='radio-inline'><input type='radio' name='isLoad' value='0'  th:checked="${entity.isLoad} == 0?true:false"  />不允许</label>
+    </div>
+    <div class="form-group">
+        <button id="addDictBtn" >更新数据</button>
+    </div>
+
+</form>
+<script th:inline="javascript">
+    $(function () {
+        //在这个方法体里的东西等HTML的所有元素都加载好以后才加载这个里面的方法
+        $('#dictForm').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                type: {
+                    message: '字典类型验证失败',
+                    validators: {
+                        notEmpty: {
+                            message: '字典类型不能为空'
+                        },
+                        regexp : {//匹配规则
+                            regexp: /^[0-9]{1,2}$/,
+                            message: '字典类型必须为数字！'
+                        }
+                    }
+                },
+                code: {
+                    message: '字典编码验证失败',
+                    validators: {
+                        notEmpty: {
+                            message: '字典编码不能为空'
+                        }
+                    }
+                },
+                value: {
+                    message: '字典值验证失败',
+                    validators: {
+                        notEmpty: {
+                            message: '字典值不能为空'
+                        }
+                    }
+                }
+            }
+        });
+
+        // 绑定dialog的确定按钮的监听事件
+        $("#addDictBtn").click(function() {
+
+            var bootstrapValidator = $("#dictForm").data('bootstrapValidator');
+            bootstrapValidator.validate();
+            if(bootstrapValidator.isValid()){
+                $.post("/dict/update",$("#dictForm").serialize(),function(e){
+                    if(e.result){
+                        window.Ewin.alert({message:'更新数据成功!'});
+                    }else{
+                        window.Ewin.alert({message:'更新数据失败!'});
+                    }
+                })
+            }
+        });
+    });
+</script>
+</body>
+</html>
