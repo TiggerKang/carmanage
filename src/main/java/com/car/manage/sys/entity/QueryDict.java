@@ -5,7 +5,7 @@ package com.car.manage.sys.entity;
 /**
  *@author linzf
  **/
-public class QueryDict {
+public class QueryDict extends QueryBase {
 
 	public QueryDict(){
 		super();

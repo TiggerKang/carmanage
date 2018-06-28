@@ -1,6 +1,8 @@
 package com.car.manage.sys.controller;
 
 import com.car.manage.sys.entity.Dict;
+import com.car.manage.sys.entity.Page;
+import com.car.manage.sys.entity.QueryDict;
 import com.car.manage.sys.service.DictService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -19,6 +21,21 @@ public class DictController {
     // Autowired相当于get和set方法
     @Autowired
     private DictService dictService;
+
+    /**
+     * 功能描述：获取分页数据
+     * @param query
+     * @return
+     */
+    @RequestMapping(value="list",method = RequestMethod.POST,produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public Map<String,Object> list(QueryDict query){
+        Map<String,Object> result = new HashMap<String, Object>();
+        Page page = dictService.findByPage(query);
+        result.put("totalCount",page.getTotal());
+        result.put("result",page.getRows());
+        return result;
+    }
 
     /**
      * 功能描述：跳转到更新数据字典的页面
@@ -60,14 +77,16 @@ public class DictController {
      * @param entity
      * @return
      */
-    @RequestMapping(value="delete",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value="delete",method = RequestMethod.POST,produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public Map<String,Object> delete(Dict entity){
         Map<String,Object> result = new HashMap<>();
         if(dictService.deleteById(entity)>0){
             result.put("msg","删除字典数据成功");
+            result.put("result",true);
         }else{
             result.put("msg","删除字典数据失败");
+            result.put("result",false);
         }
         return result;
     }

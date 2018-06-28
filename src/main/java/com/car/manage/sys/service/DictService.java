@@ -2,9 +2,13 @@ package com.car.manage.sys.service;
 
 import com.car.manage.sys.dao.DictDao;
 import com.car.manage.sys.entity.Dict;
+import com.car.manage.sys.entity.Page;
+import com.car.manage.sys.entity.QueryDict;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @Transactional(rollbackFor={IllegalArgumentException.class})
@@ -12,6 +16,34 @@ public class DictService {
 
     @Autowired
     private DictDao dictDao;
+
+    /**
+     * 功能描述：分页的统一调用方法
+     * @param query
+     * @return
+     */
+    public Page findByPage(QueryDict query){
+        return new Page(dictDao.findByPage(query),dictDao.count(query));
+    }
+
+
+    /**
+     * 功能描述：分页的分开调用方法
+     * @param query
+     * @return
+     */
+    public List<Dict> findByPage1(QueryDict query){
+        return dictDao.findByPage(query);
+    }
+
+    /**
+     * 功能描述：实现统计总的字典数据
+     * @param query
+     * @return
+     */
+    public int count(QueryDict query){
+        return dictDao.count(query);
+    }
 
     /**
      * 功能描述：根据ID来获取数据字典的数据

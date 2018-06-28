@@ -31,4 +31,50 @@
 		delete from dict where id = #{id}
 	</delete>
 
+	<!--分页查询 code like  concat('abc','def') 相当于 code like  'abcdef '-->
+	<select id="findByPage" parameterType="com.car.manage.sys.entity.QueryDict" resultMap="DictMap">
+		SELECT * FROM dict
+		WHERE 1=1
+		<if test="code!=null  and code!=''">
+			AND code like concat(#{code},'%')
+		</if>
+		<if test="text!=null and text!=''">
+			AND text like concat(#{text},'%')
+		</if>
+		<if test="type!=null  and type!=''">
+			AND type like concat(#{type},'%')
+		</if>
+		<if test="value!=null  and value!=''">
+			AND value like concat(#{value},'%')
+		</if>
+		<if test="isLoad!=null  and isLoad!=''">
+			AND is_load=#{isLoad}
+		</if>
+		<if test="sort!= null  and sort!=''">
+			order by ${sort} ${order}
+		</if>
+		limit #{offset},#{limit}
+	</select>
+
+	<!--统计-->
+	<select id="count" parameterType="com.car.manage.sys.entity.QueryDict" resultType="int">
+		SELECT count(*) FROM dict
+		WHERE 1=1
+		<if test="code!=null  and code!=''">
+			AND code like concat(#{code},'%')
+		</if>
+		<if test="text!=null and text!=''">
+			AND text like concat(#{text},'%')
+		</if>
+		<if test="type!=null  and type!=''">
+			AND type like concat(#{type},'%')
+		</if>
+		<if test="value!=null  and value!=''">
+			AND value like concat(#{value},'%')
+		</if>
+		<if test="isLoad!=null  and isLoad!=''">
+			AND is_load=#{isLoad}
+		</if>
+	</select>
+
 </mapper>

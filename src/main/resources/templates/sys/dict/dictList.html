@@ -1,10 +1,210 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>数据字典列表</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/bootstrap-table.css}" rel="stylesheet"/>
+    <link th:href="@{/font-awesome/css/font-awesome.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/bootstrap-datetimepicker.css}" rel="stylesheet"/>
+    <link th:href="@{/css/bootstrapValidator.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/fileinput.css}" rel="stylesheet"/>
+    <link th:href="@{/css/fileinput-rtl.css}" rel="stylesheet"/>
+    <link th:href="@{/css/theme.css}" rel="stylesheet"/>
+    <link th:href="@{/css/zTreeStyle/metro.css}" rel="stylesheet"/>
+
+
+    <script th:src="@{/js/sockjs.min.js}"></script>
+    <script th:src="@{/js/stomp.min.js}"></script>
+    <script th:src="@{/js/jquery.js}"></script>
+    <script th:src="@{/js/distpicker/distpicker.data.js}"></script>
+    <script th:src="@{/js/distpicker/distpicker.js}"></script>
+    <script th:src="@{/js/websocket/socketUtil.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/bootstrap/nav/nav.js}"></script>
+    <script th:src="@{/js/bootstrap/tab/bootstrap-tab.js}"></script>
+    <script th:src="@{/js/bootstrap/tree/tree.js}"></script>
+    <script th:src="@{/js/bootstrap/alert/alert.js}"></script>
+    <script th:src="@{/js/bootstrap/table/bootstrap-table.js}"></script>
+    <script th:src="@{/js/bootstrap/date/bootstrap-datetimepicker.js}"></script>
+    <script th:src="@{/js/bootstrap/validator/bootstrapValidator.min.js}"></script>
+    <script th:src="@{/js/bootstrap/upload/fileinput.min.js}"></script>
+    <script th:src="@{/js/bootstrap/upload/plugins/sortable.js}"></script>
+    <script th:src="@{/js/bootstrap/upload/locales/zh.js}"></script>
+    <script th:src="@{/js/bootstrap/upload/theme.js}"></script>
+    <script th:src="@{/js/bootstrap/ztree/jquery.ztree.all-3.5.min.js}"></script>
+    <script th:src="@{/js/bootstrap/checkbox/checkbox.js}"></script>
+    <script th:src="@{/js/bootstrap/radio/radio.js}"></script>
+    <script th:src="@{/js/ajaxutil/ajaxUtil.js}"></script>
+    <script th:src="@{/js/dict/dictUtil.js}"></script>
+    <script th:src="@{/js/bootstrap/date/date.prototype.format.js}"></script>
+    <script th:src="@{/js/bootstrap/util/number.pick.util.js}"></script>
 </head>
 <body>
-    这是一个数据字典的列表页
+<div class="panel-body" style="padding-bottom:0px;">
+    <div class="panel panel-default">
+        <div class="panel-heading">查询条件</div>
+        <div class="panel-body">
+            <form class="form-inline" role="form" style="float: left; width: 100%;" method="post" id="queryDict">
+                <div class="form-group">
+                    <label for="type">字典类型:</label>
+                    <input type="text" class="form-control" name="type" id="type"  placeholder="请输入字典类型" />
+                </div>
+                <div class="form-group">
+                    <label for="code">字典编码:</label>
+                    <input type="text" class="form-control" name="code" id="code"  placeholder="请输入字典编码" />
+                </div>
+                <div class="form-group">
+                    <label for="value">字典值:</label>
+                    <input type="text" class="form-control" name="value" id="value"  placeholder="请输入字典值" />
+                </div>
+                <div class="form-group">
+                    <label for="text">字典描述:</label>
+                    <input type="text" class="form-control" name="text" id="text"  placeholder="请输入字典值" />
+                </div>
+                <div class="form-group">
+                    <button type="button" id="queryBtn" onclick="doQuery();" class="btn btn-primary">查询</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <table id="dict-table" style="margin-top: -50px;">
+    </table>
+</div>
+<script th:inline="javascript">
+
+    // 获取当前窗口的宽度
+
+
+    $(function() {
+        initTable();
+        $('#dict-table').bootstrapTable('hideColumn', 'id');
+    });
+
+    function doQuery(){
+        $('#dict-table').bootstrapTable('refresh');    //刷新表格
+    }
+
+    function initTable(){
+        $('#dict-table').bootstrapTable({
+            url:"/dict/list",
+            showColumns:true,
+            formId :"queryDict",
+            pagination : true,
+            sortName : 'id',
+            sortOrder : 'desc',
+            clickToSelect: true,// 单击某一行的时候选中某一条记录
+            pageSize :2,
+            cardView : false,// 根据屏幕大小来决定是否试图展示
+            toolbars:[
+                {
+                    text: '添加',
+                    iconCls: 'glyphicon glyphicon-plus',
+                    handler: function () {
+                        window.open("/dict/toAddPage")
+                    }
+                },
+                {
+                    text: '修改',
+                    iconCls: 'glyphicon glyphicon-pencil',
+                    handler: function () {
+                        var rows = $('#dict-table').bootstrapTable('getSelections');
+                        if(rows.length==0||rows.length>1){
+                            window.Ewin.alert({message:'请选择一条需要修改的数据!'});
+                            return false;
+                        }
+                        window.open("/dict/toUpdatePage?id="+rows[0].id)
+                    }
+                },
+                {
+                    text: '删除',
+                    iconCls: 'glyphicon glyphicon-remove',
+                    handler: function () {
+                        var rows = $('#dict-table').bootstrapTable('getSelections');
+                        if(rows.length==0){
+                            window.Ewin.alert({message:'请选择一条需要删除的数据!'});
+                            return false;
+                        }
+                        if(rows.length>1){
+                            window.Ewin.alert({message:'您一次只能删除一条数据!'});
+                            return false;
+                        }
+                        for(var i=0;i<rows.length;i++){
+                            console.log(rows[i].id+"-"+rows[i].code+"-"+rows[i].text+"-"+rows[i].type+"-"+rows[i].value+"-"+rows[i].isLoad);
+                        }
+
+                        window.Ewin.confirm({title:'提示',message:'是否要删除您所选择的记录？',width:500}).on(function (e) {
+                            if (e) {
+                                $.post("/dict/delete",{id:rows[0].id},function(e){
+                                    if(e.result){
+                                        window.Ewin.alert({message:e.msg});
+                                        doQuery();
+                                    }else{
+                                        window.Ewin.alert({message:e.msg});
+                                    }
+                                });
+                            }
+                        });
+                    }
+                }
+            ],
+            columns: [
+                {
+                    checkbox: true
+                },
+                {
+                    field: '',
+                    title: '序号',
+                    formatter: function (value, row, index) {
+                        return index+1;
+                    }
+                },
+                {
+                    field : 'id',
+                    title : '字典流水',
+                    align : 'center',
+                    valign : 'middle',
+                    hide : false,
+                    sortable : true
+                },
+                {
+                    field : 'type',
+                    title : '字典类型',
+                    align : 'center',
+                    valign : 'middle',
+                    sortable : true
+                },
+                {
+                    field : 'code',
+                    title : '字典编码',
+                    align : 'center',
+                    valign : 'middle',
+                    sortable : true
+                },
+                {
+                    field : 'value',
+                    title : '字典值',
+                    align : 'center',
+                    valign : 'middle',
+                    sortable : true
+                },
+                {
+                    field : 'text',
+                    title : '字典描述',
+                    align : 'center',
+                    valign : 'middle',
+                    sortable : true
+                },
+                {
+                    field : 'isLoad',
+                    title : '前端加载',
+                    align : 'center',
+                    valign : 'middle',
+                    sortable : true
+                }]
+        });
+    }
+
+</script>
 </body>
 </html>

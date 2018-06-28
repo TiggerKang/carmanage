@@ -1,447 +1,287 @@
-2018-06-27 21:45:08.020  INFO 1492 --- [main] com.car.manage.CarmanageApplication      : Starting CarmanageApplication on P-V-9 with PID 1492 (D:\idea-work\carmanage\target\classes started by Administrator in D:\idea-work\carmanage)
-2018-06-27 21:45:08.027  INFO 1492 --- [main] com.car.manage.CarmanageApplication      : The following profiles are active: dev
-2018-06-27 21:45:08.059  INFO 1492 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4d518b32: startup date [Wed Jun 27 21:45:08 CST 2018]; root of context hierarchy
-2018-06-27 21:45:08.934  INFO 1492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2018-06-27 21:45:08.958  INFO 1492 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-06-27 21:45:08.958  INFO 1492 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2018-06-27 21:45:08.963  INFO 1492 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;E:\work-sort\git\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\work-sort\svn\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.]
-2018-06-27 21:45:09.045  INFO 1492 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-06-27 21:45:09.046  INFO 1492 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 986 ms
-2018-06-27 21:45:09.160  INFO 1492 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-06-27 21:45:09.166  INFO 1492 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-06-27 21:45:09.167  INFO 1492 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-06-27 21:45:09.167  INFO 1492 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-06-27 21:45:09.167  INFO 1492 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-06-27 21:45:09.586  INFO 1492 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 21:45:09.742  INFO 1492 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4d518b32: startup date [Wed Jun 27 21:45:08 CST 2018]; root of context hierarchy
-2018-06-27 21:45:09.804  INFO 1492 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/update],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.update(com.car.manage.sys.entity.Dict)
-2018-06-27 21:45:09.806  INFO 1492 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/delete],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.delete(com.car.manage.sys.entity.Dict)
-2018-06-27 21:45:09.807  INFO 1492 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/save],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.save(com.car.manage.sys.entity.Dict)
-2018-06-27 21:45:09.807  INFO 1492 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toDictList],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toDictList()
-2018-06-27 21:45:09.808  INFO 1492 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/getDict],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.getDict(com.car.manage.sys.entity.Dict)
-2018-06-27 21:45:09.810  INFO 1492 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-06-27 21:45:09.810  INFO 1492 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-06-27 21:45:09.834  INFO 1492 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 21:45:09.834  INFO 1492 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 21:45:10.110  INFO 1492 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-06-27 21:45:10.111  INFO 1492 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-06-27 21:45:10.114  INFO 1492 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-2018-06-27 21:45:10.144  INFO 1492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2018-06-27 21:45:10.148  INFO 1492 --- [main] com.car.manage.CarmanageApplication      : Started CarmanageApplication in 2.459 seconds (JVM running for 3.505)
-2018-06-27 21:45:53.354  INFO 1492 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-06-27 21:45:53.354  INFO 1492 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-06-27 21:45:53.368  INFO 1492 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
-2018-06-27 21:47:32.569  INFO 3300 --- [main] com.car.manage.CarmanageApplication      : Starting CarmanageApplication on P-V-9 with PID 3300 (D:\idea-work\carmanage\target\classes started by Administrator in D:\idea-work\carmanage)
-2018-06-27 21:47:32.571  INFO 3300 --- [main] com.car.manage.CarmanageApplication      : The following profiles are active: dev
-2018-06-27 21:47:32.608  INFO 3300 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@50d13246: startup date [Wed Jun 27 21:47:32 CST 2018]; root of context hierarchy
-2018-06-27 21:47:33.461  INFO 3300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2018-06-27 21:47:33.479  INFO 3300 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-06-27 21:47:33.479  INFO 3300 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2018-06-27 21:47:33.491  INFO 3300 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;E:\work-sort\git\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\work-sort\svn\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.]
-2018-06-27 21:47:33.569  INFO 3300 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-06-27 21:47:33.570  INFO 3300 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 962 ms
-2018-06-27 21:47:33.663  INFO 3300 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-06-27 21:47:33.668  INFO 3300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-06-27 21:47:33.669  INFO 3300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-06-27 21:47:33.669  INFO 3300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-06-27 21:47:33.669  INFO 3300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-06-27 21:47:33.971  INFO 3300 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 21:47:34.119  INFO 3300 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@50d13246: startup date [Wed Jun 27 21:47:32 CST 2018]; root of context hierarchy
-2018-06-27 21:47:34.164  INFO 3300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/update],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.update(com.car.manage.sys.entity.Dict)
-2018-06-27 21:47:34.165  INFO 3300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/delete],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.delete(com.car.manage.sys.entity.Dict)
-2018-06-27 21:47:34.165  INFO 3300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/save],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.save(com.car.manage.sys.entity.Dict)
-2018-06-27 21:47:34.165  INFO 3300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/getDict],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.getDict(com.car.manage.sys.entity.Dict)
-2018-06-27 21:47:34.165  INFO 3300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toDictList],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toDictList()
-2018-06-27 21:47:34.168  INFO 3300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-06-27 21:47:34.169  INFO 3300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-06-27 21:47:34.193  INFO 3300 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 21:47:34.193  INFO 3300 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 21:47:34.517  INFO 3300 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-06-27 21:47:34.517  INFO 3300 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-06-27 21:47:34.521  INFO 3300 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-2018-06-27 21:47:34.549  INFO 3300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2018-06-27 21:47:34.552  INFO 3300 --- [main] com.car.manage.CarmanageApplication      : Started CarmanageApplication in 2.579 seconds (JVM running for 3.333)
-2018-06-27 21:47:37.388  INFO 3300 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-06-27 21:47:37.388  INFO 3300 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-06-27 21:47:37.403  INFO 3300 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
-2018-06-27 21:49:31.442  INFO 3648 --- [main] com.car.manage.CarmanageApplication      : Starting CarmanageApplication on P-V-9 with PID 3648 (D:\idea-work\carmanage\target\classes started by Administrator in D:\idea-work\carmanage)
-2018-06-27 21:49:31.443  INFO 3648 --- [main] com.car.manage.CarmanageApplication      : The following profiles are active: dev
-2018-06-27 21:49:31.472  INFO 3648 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6692b6c6: startup date [Wed Jun 27 21:49:31 CST 2018]; root of context hierarchy
-2018-06-27 21:49:32.280  INFO 3648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2018-06-27 21:49:32.295  INFO 3648 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-06-27 21:49:32.295  INFO 3648 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2018-06-27 21:49:32.299  INFO 3648 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;E:\work-sort\git\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\work-sort\svn\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.]
-2018-06-27 21:49:32.374  INFO 3648 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-06-27 21:49:32.374  INFO 3648 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 902 ms
-2018-06-27 21:49:32.471  INFO 3648 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-06-27 21:49:32.474  INFO 3648 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-06-27 21:49:32.475  INFO 3648 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-06-27 21:49:32.475  INFO 3648 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-06-27 21:49:32.475  INFO 3648 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-06-27 21:49:32.787  INFO 3648 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 21:49:32.935  INFO 3648 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6692b6c6: startup date [Wed Jun 27 21:49:31 CST 2018]; root of context hierarchy
-2018-06-27 21:49:32.979  INFO 3648 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/update],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.update(com.car.manage.sys.entity.Dict)
-2018-06-27 21:49:32.980  INFO 3648 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/delete],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.delete(com.car.manage.sys.entity.Dict)
-2018-06-27 21:49:32.980  INFO 3648 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/save],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.save(com.car.manage.sys.entity.Dict)
-2018-06-27 21:49:32.980  INFO 3648 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toDictList],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toDictList()
-2018-06-27 21:49:32.980  INFO 3648 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toAddPage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toAddPage()
-2018-06-27 21:49:32.980  INFO 3648 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/getDict],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.getDict(com.car.manage.sys.entity.Dict)
-2018-06-27 21:49:32.982  INFO 3648 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-06-27 21:49:32.982  INFO 3648 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-06-27 21:49:33.008  INFO 3648 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 21:49:33.008  INFO 3648 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 21:49:33.290  INFO 3648 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-06-27 21:49:33.291  INFO 3648 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-06-27 21:49:33.295  INFO 3648 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-2018-06-27 21:49:33.379  INFO 3648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2018-06-27 21:49:33.382  INFO 3648 --- [main] com.car.manage.CarmanageApplication      : Started CarmanageApplication in 2.372 seconds (JVM running for 3.298)
-2018-06-27 21:49:41.228  INFO 3648 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-06-27 21:49:41.229  INFO 3648 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-06-27 21:49:41.245  INFO 3648 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
-2018-06-27 21:51:20.538  INFO 8024 --- [main] com.car.manage.CarmanageApplication      : Starting CarmanageApplication on P-V-9 with PID 8024 (D:\idea-work\carmanage\target\classes started by Administrator in D:\idea-work\carmanage)
-2018-06-27 21:51:20.541  INFO 8024 --- [main] com.car.manage.CarmanageApplication      : The following profiles are active: dev
-2018-06-27 21:51:20.586  INFO 8024 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@54e7df6a: startup date [Wed Jun 27 21:51:20 CST 2018]; root of context hierarchy
-2018-06-27 21:51:21.445  INFO 8024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2018-06-27 21:51:21.461  INFO 8024 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-06-27 21:51:21.462  INFO 8024 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2018-06-27 21:51:21.465  INFO 8024 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;E:\work-sort\git\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\work-sort\svn\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.]
-2018-06-27 21:51:21.551  INFO 8024 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-06-27 21:51:21.552  INFO 8024 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 966 ms
-2018-06-27 21:51:21.648  INFO 8024 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-06-27 21:51:21.651  INFO 8024 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-06-27 21:51:21.651  INFO 8024 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-06-27 21:51:21.652  INFO 8024 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-06-27 21:51:21.652  INFO 8024 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-06-27 21:51:21.945  INFO 8024 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 21:51:22.091  INFO 8024 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@54e7df6a: startup date [Wed Jun 27 21:51:20 CST 2018]; root of context hierarchy
-2018-06-27 21:51:22.138  INFO 8024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/update],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.update(com.car.manage.sys.entity.Dict)
-2018-06-27 21:51:22.139  INFO 8024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/delete],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.delete(com.car.manage.sys.entity.Dict)
-2018-06-27 21:51:22.140  INFO 8024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/save],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.save(com.car.manage.sys.entity.Dict)
-2018-06-27 21:51:22.140  INFO 8024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/getDict],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.getDict(com.car.manage.sys.entity.Dict)
-2018-06-27 21:51:22.140  INFO 8024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toDictList],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toDictList()
-2018-06-27 21:51:22.140  INFO 8024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toAddPage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toAddPage()
-2018-06-27 21:51:22.142  INFO 8024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-06-27 21:51:22.142  INFO 8024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-06-27 21:51:22.166  INFO 8024 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 21:51:22.166  INFO 8024 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 21:51:22.483  INFO 8024 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-06-27 21:51:22.484  INFO 8024 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-06-27 21:51:22.488  INFO 8024 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-2018-06-27 21:51:22.515  INFO 8024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2018-06-27 21:51:22.518  INFO 8024 --- [main] com.car.manage.CarmanageApplication      : Started CarmanageApplication in 2.335 seconds (JVM running for 2.977)
-2018-06-27 21:51:25.097  INFO 8024 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-06-27 21:51:25.097  INFO 8024 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-06-27 21:51:25.114  INFO 8024 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
-2018-06-27 21:56:14.554  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : Starting CarmanageApplication on P-V-9 with PID 2352 (D:\idea-work\carmanage\target\classes started by Administrator in D:\idea-work\carmanage)
-2018-06-27 21:56:14.555  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : The following profiles are active: dev
-2018-06-27 21:56:14.602  INFO 2352 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@712255e2: startup date [Wed Jun 27 21:56:14 CST 2018]; root of context hierarchy
-2018-06-27 21:56:15.780  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2018-06-27 21:56:15.796  INFO 2352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-06-27 21:56:15.797  INFO 2352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2018-06-27 21:56:15.800  INFO 2352 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;E:\work-sort\git\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\work-sort\svn\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.]
-2018-06-27 21:56:15.871  INFO 2352 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-06-27 21:56:15.871  INFO 2352 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1269 ms
-2018-06-27 21:56:15.977  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-06-27 21:56:15.981  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-06-27 21:56:15.981  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-06-27 21:56:15.981  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-06-27 21:56:15.981  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-06-27 21:56:16.296  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 21:56:16.465  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@712255e2: startup date [Wed Jun 27 21:56:14 CST 2018]; root of context hierarchy
-2018-06-27 21:56:16.564  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/update],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.update(com.car.manage.sys.entity.Dict)
-2018-06-27 21:56:16.565  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/delete],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.delete(com.car.manage.sys.entity.Dict)
-2018-06-27 21:56:16.565  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/save],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.save(com.car.manage.sys.entity.Dict)
-2018-06-27 21:56:16.565  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toDictList],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toDictList()
-2018-06-27 21:56:16.565  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toAddPage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toAddPage()
-2018-06-27 21:56:16.566  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/getDict],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.getDict(com.car.manage.sys.entity.Dict)
-2018-06-27 21:56:16.567  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-06-27 21:56:16.568  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-06-27 21:56:16.592  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 21:56:16.592  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 21:56:16.952  INFO 2352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2018-06-27 21:56:16.975  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-06-27 21:56:16.976  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-06-27 21:56:16.979  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-2018-06-27 21:56:17.008  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2018-06-27 21:56:17.011  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : Started CarmanageApplication in 2.821 seconds (JVM running for 3.361)
-2018-06-27 21:56:19.470  INFO 2352 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-06-27 21:56:19.470  INFO 2352 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-06-27 21:56:19.484  INFO 2352 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
-2018-06-27 22:08:03.080  WARN 2352 --- [http-nio-9090-exec-1] o.s.web.servlet.PageNotFound             : Request method 'POST' not supported
-2018-06-27 22:08:03.080  WARN 2352 --- [http-nio-9090-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
-2018-06-27 22:08:48.495  INFO 2352 --- [Thread-12] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@712255e2: startup date [Wed Jun 27 21:56:14 CST 2018]; root of context hierarchy
-2018-06-27 22:08:48.499  INFO 2352 --- [Thread-12] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2018-06-27 22:08:48.499  INFO 2352 --- [Thread-12] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
-2018-06-27 22:08:48.763  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : Starting CarmanageApplication on P-V-9 with PID 2352 (D:\idea-work\carmanage\target\classes started by Administrator in D:\idea-work\carmanage)
-2018-06-27 22:08:48.763  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : The following profiles are active: dev
-2018-06-27 22:08:48.765  INFO 2352 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1d164e9f: startup date [Wed Jun 27 22:08:48 CST 2018]; root of context hierarchy
-2018-06-27 22:08:49.170  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2018-06-27 22:08:49.171  INFO 2352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-06-27 22:08:49.171  INFO 2352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2018-06-27 22:08:49.191  INFO 2352 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-06-27 22:08:49.191  INFO 2352 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 426 ms
-2018-06-27 22:08:49.213  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-06-27 22:08:49.214  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-06-27 22:08:49.214  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-06-27 22:08:49.214  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-06-27 22:08:49.214  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-06-27 22:08:49.283  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:08:49.318  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1d164e9f: startup date [Wed Jun 27 22:08:48 CST 2018]; root of context hierarchy
-2018-06-27 22:08:49.325  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/update],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.update(com.car.manage.sys.entity.Dict)
-2018-06-27 22:08:49.325  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/delete],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.delete(com.car.manage.sys.entity.Dict)
-2018-06-27 22:08:49.326  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/save],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.save(com.car.manage.sys.entity.Dict)
-2018-06-27 22:08:49.326  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toDictList],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toDictList()
-2018-06-27 22:08:49.326  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toAddPage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toAddPage()
-2018-06-27 22:08:49.326  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/getDict],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.getDict(com.car.manage.sys.entity.Dict)
-2018-06-27 22:08:49.330  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-06-27 22:08:49.330  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-06-27 22:08:49.338  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:08:49.338  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:08:49.417  INFO 2352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2018-06-27 22:08:49.430  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-06-27 22:08:49.430  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-06-27 22:08:49.433  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-2018-06-27 22:08:49.441  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2018-06-27 22:08:49.442  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : Started CarmanageApplication in 0.705 seconds (JVM running for 755.793)
-2018-06-27 22:08:49.444  INFO 2352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2018-06-27 22:09:36.187  INFO 2352 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-06-27 22:09:36.187  INFO 2352 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-06-27 22:09:36.194  INFO 2352 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
-2018-06-27 22:09:50.313  INFO 2352 --- [http-nio-9090-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2018-06-27 22:10:06.000  INFO 2352 --- [http-nio-9090-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2018-06-27 22:10:06.077 DEBUG 2352 --- [http-nio-9090-exec-8] com.car.manage.sys.dao.DictDao.saveDict  : ==>  Preparing: INSERT INTO dict(code,text,type,value,is_load) VALUES(?,?,?,?,?) 
-2018-06-27 22:10:06.093 DEBUG 2352 --- [http-nio-9090-exec-8] com.car.manage.sys.dao.DictDao.saveDict  : ==> Parameters: aaa1121(String), 1231(String), 12(String), bb121(String), 1(String)
-2018-06-27 22:10:06.191 DEBUG 2352 --- [http-nio-9090-exec-8] com.car.manage.sys.dao.DictDao.saveDict  : <==    Updates: 1
-2018-06-27 22:10:30.939 DEBUG 2352 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.saveDict  : ==>  Preparing: INSERT INTO dict(code,text,type,value,is_load) VALUES(?,?,?,?,?) 
-2018-06-27 22:10:30.940 DEBUG 2352 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.saveDict  : ==> Parameters: qwq(String), qwq(String), 21(String), wqw(String), 1(String)
-2018-06-27 22:10:31.037 DEBUG 2352 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.saveDict  : <==    Updates: 1
-2018-06-27 22:11:47.050 DEBUG 2352 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.saveDict  : ==>  Preparing: INSERT INTO dict(code,text,type,value,is_load) VALUES(?,?,?,?,?) 
-2018-06-27 22:11:47.050 DEBUG 2352 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.saveDict  : ==> Parameters: 2eq(String), 1231(String), 12(String), 2312(String), 1(String)
-2018-06-27 22:11:47.148 DEBUG 2352 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.saveDict  : <==    Updates: 1
-2018-06-27 22:12:38.266  INFO 2352 --- [Thread-20] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1d164e9f: startup date [Wed Jun 27 22:08:48 CST 2018]; root of context hierarchy
-2018-06-27 22:12:38.268  INFO 2352 --- [Thread-20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2018-06-27 22:12:38.270  INFO 2352 --- [Thread-20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
-2018-06-27 22:12:38.270  INFO 2352 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2018-06-27 22:12:38.275  INFO 2352 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2018-06-27 22:12:38.554  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : Starting CarmanageApplication on P-V-9 with PID 2352 (D:\idea-work\carmanage\target\classes started by Administrator in D:\idea-work\carmanage)
-2018-06-27 22:12:38.554  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : The following profiles are active: dev
-2018-06-27 22:12:38.556  INFO 2352 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@387cc932: startup date [Wed Jun 27 22:12:38 CST 2018]; root of context hierarchy
-2018-06-27 22:12:39.036  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2018-06-27 22:12:39.040  INFO 2352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-06-27 22:12:39.040  INFO 2352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2018-06-27 22:12:39.061  INFO 2352 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-06-27 22:12:39.062  INFO 2352 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 506 ms
-2018-06-27 22:12:39.085  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-06-27 22:12:39.086  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-06-27 22:12:39.086  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-06-27 22:12:39.086  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-06-27 22:12:39.086  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-06-27 22:12:39.162  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:12:39.203  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@387cc932: startup date [Wed Jun 27 22:12:38 CST 2018]; root of context hierarchy
-2018-06-27 22:12:39.211  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/update],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.update(com.car.manage.sys.entity.Dict)
-2018-06-27 22:12:39.211  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/delete],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.delete(com.car.manage.sys.entity.Dict)
-2018-06-27 22:12:39.211  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/save],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.save(com.car.manage.sys.entity.Dict)
-2018-06-27 22:12:39.211  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toDictList],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toDictList()
-2018-06-27 22:12:39.211  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toAddPage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toAddPage()
-2018-06-27 22:12:39.212  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/getDict],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.getDict(com.car.manage.sys.entity.Dict)
-2018-06-27 22:12:39.213  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-06-27 22:12:39.213  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-06-27 22:12:39.220  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:12:39.220  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:12:39.303  INFO 2352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2018-06-27 22:12:39.314  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-06-27 22:12:39.315  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-06-27 22:12:39.317  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-2018-06-27 22:12:39.323  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2018-06-27 22:12:39.323  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : Started CarmanageApplication in 0.796 seconds (JVM running for 985.674)
-2018-06-27 22:12:39.325  INFO 2352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2018-06-27 22:12:54.284  INFO 2352 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-06-27 22:12:54.285  INFO 2352 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-06-27 22:12:54.287  INFO 2352 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 2 ms
-2018-06-27 22:13:00.546  INFO 2352 --- [http-nio-9090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2018-06-27 22:13:16.040  INFO 2352 --- [http-nio-9090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2018-06-27 22:13:16.086 DEBUG 2352 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.saveDict  : ==>  Preparing: INSERT INTO dict(code,text,type,value,is_load) VALUES(?,?,?,?,?) 
-2018-06-27 22:13:16.086 DEBUG 2352 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.saveDict  : ==> Parameters: 132(String), 131(String), 56(String), 1312(String), 1(String)
-2018-06-27 22:13:16.173 DEBUG 2352 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.saveDict  : <==    Updates: 1
-2018-06-27 22:13:29.491 DEBUG 2352 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.saveDict  : ==>  Preparing: INSERT INTO dict(code,text,type,value,is_load) VALUES(?,?,?,?,?) 
-2018-06-27 22:13:29.492 DEBUG 2352 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.saveDict  : ==> Parameters: 132(String), 131(String), 59(String), 1312(String), 1(String)
-2018-06-27 22:13:29.579 DEBUG 2352 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.saveDict  : <==    Updates: 1
-2018-06-27 22:21:45.227  INFO 2352 --- [Thread-26] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@387cc932: startup date [Wed Jun 27 22:12:38 CST 2018]; root of context hierarchy
-2018-06-27 22:21:45.228  INFO 2352 --- [Thread-26] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2018-06-27 22:21:45.229  INFO 2352 --- [Thread-26] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
-2018-06-27 22:21:45.229  INFO 2352 --- [Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2018-06-27 22:21:45.233  INFO 2352 --- [Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2018-06-27 22:21:45.521  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : Starting CarmanageApplication on P-V-9 with PID 2352 (D:\idea-work\carmanage\target\classes started by Administrator in D:\idea-work\carmanage)
-2018-06-27 22:21:45.521  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : The following profiles are active: dev
-2018-06-27 22:21:45.524  INFO 2352 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@79af72f2: startup date [Wed Jun 27 22:21:45 CST 2018]; root of context hierarchy
-2018-06-27 22:21:46.074  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2018-06-27 22:21:46.075  INFO 2352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-06-27 22:21:46.075  INFO 2352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2018-06-27 22:21:46.096  INFO 2352 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-06-27 22:21:46.096  INFO 2352 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 572 ms
-2018-06-27 22:21:46.118  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-06-27 22:21:46.118  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-06-27 22:21:46.118  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-06-27 22:21:46.118  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-06-27 22:21:46.118  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-06-27 22:21:46.181  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:21:46.215  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@79af72f2: startup date [Wed Jun 27 22:21:45 CST 2018]; root of context hierarchy
-2018-06-27 22:21:46.222  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/update],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.update(com.car.manage.sys.entity.Dict)
-2018-06-27 22:21:46.222  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/delete],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.delete(com.car.manage.sys.entity.Dict)
-2018-06-27 22:21:46.222  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/save],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.save(com.car.manage.sys.entity.Dict)
-2018-06-27 22:21:46.222  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toDictList],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toDictList()
-2018-06-27 22:21:46.222  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toAddPage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toAddPage()
-2018-06-27 22:21:46.222  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/getDict],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.getDict(com.car.manage.sys.entity.Dict)
-2018-06-27 22:21:46.223  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toUpdatePage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toUpdatePage(com.car.manage.sys.entity.Dict,org.springframework.ui.Model)
-2018-06-27 22:21:46.224  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-06-27 22:21:46.224  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-06-27 22:21:46.230  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:21:46.230  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:21:46.311  INFO 2352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2018-06-27 22:21:46.324  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-06-27 22:21:46.324  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-06-27 22:21:46.327  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-2018-06-27 22:21:46.333  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2018-06-27 22:21:46.334  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : Started CarmanageApplication in 0.845 seconds (JVM running for 1532.685)
-2018-06-27 22:21:46.337  INFO 2352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2018-06-27 22:22:59.683  INFO 2352 --- [http-nio-9090-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-06-27 22:22:59.683  INFO 2352 --- [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-06-27 22:22:59.685  INFO 2352 --- [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 2 ms
-2018-06-27 22:22:59.688  INFO 2352 --- [http-nio-9090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2018-06-27 22:23:15.192  INFO 2352 --- [http-nio-9090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2018-06-27 22:23:15.240 DEBUG 2352 --- [http-nio-9090-exec-3] c.c.manage.sys.dao.DictDao.getDictById   : ==>  Preparing: select * from dict where id = ? 
-2018-06-27 22:23:15.240 DEBUG 2352 --- [http-nio-9090-exec-3] c.c.manage.sys.dao.DictDao.getDictById   : ==> Parameters: 4(Integer)
-2018-06-27 22:23:15.290 DEBUG 2352 --- [http-nio-9090-exec-3] c.c.manage.sys.dao.DictDao.getDictById   : <==      Total: 1
-2018-06-27 22:25:35.329 DEBUG 2352 --- [http-nio-9090-exec-8] c.c.manage.sys.dao.DictDao.getDictById   : ==>  Preparing: select * from dict where id = ? 
-2018-06-27 22:25:35.330 DEBUG 2352 --- [http-nio-9090-exec-8] c.c.manage.sys.dao.DictDao.getDictById   : ==> Parameters: 4(Integer)
-2018-06-27 22:25:35.374 DEBUG 2352 --- [http-nio-9090-exec-8] c.c.manage.sys.dao.DictDao.getDictById   : <==      Total: 1
-2018-06-27 22:28:27.621  INFO 2352 --- [Thread-32] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@79af72f2: startup date [Wed Jun 27 22:21:45 CST 2018]; root of context hierarchy
-2018-06-27 22:28:27.622  INFO 2352 --- [Thread-32] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2018-06-27 22:28:27.622  INFO 2352 --- [Thread-32] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
-2018-06-27 22:28:27.623  INFO 2352 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2018-06-27 22:28:27.627  INFO 2352 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2018-06-27 22:28:27.882  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : Starting CarmanageApplication on P-V-9 with PID 2352 (D:\idea-work\carmanage\target\classes started by Administrator in D:\idea-work\carmanage)
-2018-06-27 22:28:27.882  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : The following profiles are active: dev
-2018-06-27 22:28:27.884  INFO 2352 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3f2759a4: startup date [Wed Jun 27 22:28:27 CST 2018]; root of context hierarchy
-2018-06-27 22:28:28.378  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2018-06-27 22:28:28.379  INFO 2352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-06-27 22:28:28.379  INFO 2352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2018-06-27 22:28:28.402  INFO 2352 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-06-27 22:28:28.402  INFO 2352 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 518 ms
-2018-06-27 22:28:28.420  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-06-27 22:28:28.421  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-06-27 22:28:28.421  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-06-27 22:28:28.421  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-06-27 22:28:28.421  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-06-27 22:28:28.478  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:28:28.514  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3f2759a4: startup date [Wed Jun 27 22:28:27 CST 2018]; root of context hierarchy
-2018-06-27 22:28:28.521  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/update],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.update(com.car.manage.sys.entity.Dict)
-2018-06-27 22:28:28.521  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/delete],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.delete(com.car.manage.sys.entity.Dict)
-2018-06-27 22:28:28.522  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/save],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.save(com.car.manage.sys.entity.Dict)
-2018-06-27 22:28:28.522  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toDictList],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toDictList()
-2018-06-27 22:28:28.522  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toAddPage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toAddPage()
-2018-06-27 22:28:28.522  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/getDict],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.getDict(com.car.manage.sys.entity.Dict)
-2018-06-27 22:28:28.522  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toUpdatePage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toUpdatePage(com.car.manage.sys.entity.Dict,org.springframework.ui.Model)
-2018-06-27 22:28:28.523  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-06-27 22:28:28.523  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-06-27 22:28:28.530  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:28:28.530  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:28:28.609  INFO 2352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2018-06-27 22:28:28.621  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-06-27 22:28:28.621  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-06-27 22:28:28.623  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-2018-06-27 22:28:28.629  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2018-06-27 22:28:28.630  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : Started CarmanageApplication in 0.775 seconds (JVM running for 1934.981)
-2018-06-27 22:28:28.631  INFO 2352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2018-06-27 22:28:59.124  INFO 2352 --- [Thread-38] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3f2759a4: startup date [Wed Jun 27 22:28:27 CST 2018]; root of context hierarchy
-2018-06-27 22:28:59.126  INFO 2352 --- [Thread-38] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2018-06-27 22:28:59.126  INFO 2352 --- [Thread-38] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
-2018-06-27 22:28:59.366  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : Starting CarmanageApplication on P-V-9 with PID 2352 (D:\idea-work\carmanage\target\classes started by Administrator in D:\idea-work\carmanage)
-2018-06-27 22:28:59.367  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : The following profiles are active: dev
-2018-06-27 22:28:59.369  INFO 2352 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6600955d: startup date [Wed Jun 27 22:28:59 CST 2018]; root of context hierarchy
-2018-06-27 22:28:59.759  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2018-06-27 22:28:59.759  INFO 2352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-06-27 22:28:59.759  INFO 2352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2018-06-27 22:28:59.776  INFO 2352 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-06-27 22:28:59.777  INFO 2352 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 408 ms
-2018-06-27 22:28:59.795  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-06-27 22:28:59.795  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-06-27 22:28:59.795  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-06-27 22:28:59.795  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-06-27 22:28:59.795  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-06-27 22:28:59.847  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:28:59.881  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6600955d: startup date [Wed Jun 27 22:28:59 CST 2018]; root of context hierarchy
-2018-06-27 22:28:59.887  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/update],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.update(com.car.manage.sys.entity.Dict)
-2018-06-27 22:28:59.887  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/delete],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.delete(com.car.manage.sys.entity.Dict)
-2018-06-27 22:28:59.888  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/save],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.save(com.car.manage.sys.entity.Dict)
-2018-06-27 22:28:59.888  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toDictList],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toDictList()
-2018-06-27 22:28:59.888  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toAddPage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toAddPage()
-2018-06-27 22:28:59.888  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/getDict],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.getDict(com.car.manage.sys.entity.Dict)
-2018-06-27 22:28:59.888  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toUpdatePage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toUpdatePage(com.car.manage.sys.entity.Dict,org.springframework.ui.Model)
-2018-06-27 22:28:59.889  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-06-27 22:28:59.889  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-06-27 22:28:59.895  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:28:59.895  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:28:59.968  INFO 2352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2018-06-27 22:28:59.980  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-06-27 22:28:59.980  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-06-27 22:28:59.982  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-2018-06-27 22:28:59.988  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2018-06-27 22:28:59.989  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : Started CarmanageApplication in 0.649 seconds (JVM running for 1966.34)
-2018-06-27 22:28:59.990  INFO 2352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2018-06-27 22:29:07.205  INFO 2352 --- [http-nio-9090-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-06-27 22:29:07.205  INFO 2352 --- [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-06-27 22:29:07.207  INFO 2352 --- [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 2 ms
-2018-06-27 22:29:07.211  INFO 2352 --- [http-nio-9090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
-2018-06-27 22:29:22.719  INFO 2352 --- [http-nio-9090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
-2018-06-27 22:29:22.767 DEBUG 2352 --- [http-nio-9090-exec-3] c.c.manage.sys.dao.DictDao.getDictById   : ==>  Preparing: select * from dict where id = ? 
-2018-06-27 22:29:22.767 DEBUG 2352 --- [http-nio-9090-exec-3] c.c.manage.sys.dao.DictDao.getDictById   : ==> Parameters: 4(Integer)
-2018-06-27 22:29:22.812 DEBUG 2352 --- [http-nio-9090-exec-3] c.c.manage.sys.dao.DictDao.getDictById   : <==      Total: 1
-2018-06-27 22:30:46.458  WARN 2352 --- [http-nio-9090-exec-8] o.s.web.servlet.PageNotFound             : Request method 'POST' not supported
-2018-06-27 22:30:46.459  WARN 2352 --- [http-nio-9090-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
-2018-06-27 22:31:03.049  INFO 2352 --- [Thread-44] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6600955d: startup date [Wed Jun 27 22:28:59 CST 2018]; root of context hierarchy
-2018-06-27 22:31:03.051  INFO 2352 --- [Thread-44] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2018-06-27 22:31:03.051  INFO 2352 --- [Thread-44] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
-2018-06-27 22:31:03.051  INFO 2352 --- [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
-2018-06-27 22:31:07.672  INFO 2352 --- [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
-2018-06-27 22:31:07.907  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : Starting CarmanageApplication on P-V-9 with PID 2352 (D:\idea-work\carmanage\target\classes started by Administrator in D:\idea-work\carmanage)
-2018-06-27 22:31:07.907  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : The following profiles are active: dev
-2018-06-27 22:31:07.909  INFO 2352 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@11dd8b3a: startup date [Wed Jun 27 22:31:07 CST 2018]; root of context hierarchy
-2018-06-27 22:31:08.316  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2018-06-27 22:31:08.316  INFO 2352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-06-27 22:31:08.316  INFO 2352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2018-06-27 22:31:08.335  INFO 2352 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-06-27 22:31:08.335  INFO 2352 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 426 ms
-2018-06-27 22:31:08.352  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-06-27 22:31:08.352  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-06-27 22:31:08.352  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-06-27 22:31:08.352  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-06-27 22:31:08.352  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-06-27 22:31:08.407  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:31:08.440  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@11dd8b3a: startup date [Wed Jun 27 22:31:07 CST 2018]; root of context hierarchy
-2018-06-27 22:31:08.447  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/update],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.update(com.car.manage.sys.entity.Dict)
-2018-06-27 22:31:08.447  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/delete],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.delete(com.car.manage.sys.entity.Dict)
-2018-06-27 22:31:08.447  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/save],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.save(com.car.manage.sys.entity.Dict)
-2018-06-27 22:31:08.447  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toDictList],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toDictList()
-2018-06-27 22:31:08.447  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toAddPage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toAddPage()
-2018-06-27 22:31:08.447  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/getDict],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.getDict(com.car.manage.sys.entity.Dict)
-2018-06-27 22:31:08.447  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toUpdatePage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toUpdatePage(com.car.manage.sys.entity.Dict,org.springframework.ui.Model)
-2018-06-27 22:31:08.449  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-06-27 22:31:08.449  INFO 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-06-27 22:31:08.455  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:31:08.455  INFO 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-27 22:31:08.535  INFO 2352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2018-06-27 22:31:08.548  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-06-27 22:31:08.548  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-06-27 22:31:08.550  INFO 2352 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-2018-06-27 22:31:08.556  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2018-06-27 22:31:08.557  INFO 2352 --- [restartedMain] com.car.manage.CarmanageApplication      : Started CarmanageApplication in 0.674 seconds (JVM running for 2094.908)
-2018-06-27 22:31:08.559  INFO 2352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2018-06-27 22:31:25.221  INFO 2352 --- [http-nio-9090-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-06-27 22:31:25.221  INFO 2352 --- [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-06-27 22:31:25.224  INFO 2352 --- [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 3 ms
-2018-06-27 22:31:42.179  INFO 2352 --- [http-nio-9090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
-2018-06-27 22:31:57.666  INFO 2352 --- [http-nio-9090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
-2018-06-27 22:31:57.709 DEBUG 2352 --- [http-nio-9090-exec-3] c.c.m.sys.dao.DictDao.updateDictById     : ==>  Preparing: update dict set code = ?,text=?,type=?,value=?,is_load=? where id=? 
-2018-06-27 22:31:57.709 DEBUG 2352 --- [http-nio-9090-exec-3] c.c.m.sys.dao.DictDao.updateDictById     : ==> Parameters: a2(String), c1(String), 88(String), b2(String), 1(String), 4(Integer)
-2018-06-27 22:31:57.793 DEBUG 2352 --- [http-nio-9090-exec-3] c.c.m.sys.dao.DictDao.updateDictById     : <==    Updates: 1
+2018-06-28 21:35:08.836  INFO 5640 --- [restartedMain] com.car.manage.CarmanageApplication      : Starting CarmanageApplication on P-V-9 with PID 5640 (D:\idea-work\carmanage\target\classes started by Administrator in D:\idea-work\carmanage)
+2018-06-28 21:35:08.841  INFO 5640 --- [restartedMain] com.car.manage.CarmanageApplication      : The following profiles are active: dev
+2018-06-28 21:35:08.886  INFO 5640 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@78ac8f98: startup date [Thu Jun 28 21:35:08 CST 2018]; root of context hierarchy
+2018-06-28 21:35:10.229  INFO 5640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2018-06-28 21:35:10.248  INFO 5640 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-28 21:35:10.248  INFO 5640 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-28 21:35:10.252  INFO 5640 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;E:\work-sort\git\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\work-sort\svn\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.]
+2018-06-28 21:35:10.327  INFO 5640 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-28 21:35:10.328  INFO 5640 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1442 ms
+2018-06-28 21:35:10.446  INFO 5640 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-06-28 21:35:10.450  INFO 5640 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-28 21:35:10.450  INFO 5640 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-28 21:35:10.450  INFO 5640 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-28 21:35:10.451  INFO 5640 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-28 21:35:10.860  INFO 5640 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-28 21:35:11.045  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@78ac8f98: startup date [Thu Jun 28 21:35:08 CST 2018]; root of context hierarchy
+2018-06-28 21:35:11.107  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/update],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.update(com.car.manage.sys.entity.Dict)
+2018-06-28 21:35:11.108  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/delete],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.delete(com.car.manage.sys.entity.Dict)
+2018-06-28 21:35:11.108  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/list],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.list(com.car.manage.sys.entity.QueryDict)
+2018-06-28 21:35:11.108  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/save],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.save(com.car.manage.sys.entity.Dict)
+2018-06-28 21:35:11.109  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toUpdatePage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toUpdatePage(com.car.manage.sys.entity.Dict,org.springframework.ui.Model)
+2018-06-28 21:35:11.109  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toAddPage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toAddPage()
+2018-06-28 21:35:11.109  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toDictList],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toDictList()
+2018-06-28 21:35:11.109  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/getDict],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.getDict(com.car.manage.sys.entity.Dict)
+2018-06-28 21:35:11.111  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-28 21:35:11.111  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-28 21:35:11.205  INFO 5640 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-28 21:35:11.205  INFO 5640 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-28 21:35:11.649  INFO 5640 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-06-28 21:35:11.673  INFO 5640 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-28 21:35:11.674  INFO 5640 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-06-28 21:35:11.678  INFO 5640 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-06-28 21:35:11.709  INFO 5640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2018-06-28 21:35:11.713  INFO 5640 --- [restartedMain] com.car.manage.CarmanageApplication      : Started CarmanageApplication in 3.195 seconds (JVM running for 4.316)
+2018-06-28 21:38:49.350  INFO 5640 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-28 21:38:49.350  INFO 5640 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-28 21:38:49.366  INFO 5640 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2018-06-28 21:39:38.694  INFO 5640 --- [http-nio-9090-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-06-28 21:39:54.335  INFO 5640 --- [http-nio-9090-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-06-28 21:39:54.430 DEBUG 5640 --- [http-nio-9090-exec-7] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:39:54.445 DEBUG 5640 --- [http-nio-9090-exec-7] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 15(Integer)
+2018-06-28 21:39:54.500 DEBUG 5640 --- [http-nio-9090-exec-7] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 5
+2018-06-28 21:39:54.501 DEBUG 5640 --- [http-nio-9090-exec-7] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:39:54.502 DEBUG 5640 --- [http-nio-9090-exec-7] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:39:54.547 DEBUG 5640 --- [http-nio-9090-exec-7] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:40:28.971 DEBUG 5640 --- [http-nio-9090-exec-1] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:40:28.971 DEBUG 5640 --- [http-nio-9090-exec-1] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 15(Integer)
+2018-06-28 21:40:29.017 DEBUG 5640 --- [http-nio-9090-exec-1] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 5
+2018-06-28 21:40:29.017 DEBUG 5640 --- [http-nio-9090-exec-1] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:40:29.017 DEBUG 5640 --- [http-nio-9090-exec-1] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:40:29.062 DEBUG 5640 --- [http-nio-9090-exec-1] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:40:43.312 DEBUG 5640 --- [http-nio-9090-exec-5] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:40:43.313 DEBUG 5640 --- [http-nio-9090-exec-5] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 15(Integer)
+2018-06-28 21:40:43.359 DEBUG 5640 --- [http-nio-9090-exec-5] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 5
+2018-06-28 21:40:43.360 DEBUG 5640 --- [http-nio-9090-exec-5] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:40:43.361 DEBUG 5640 --- [http-nio-9090-exec-5] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:40:43.406 DEBUG 5640 --- [http-nio-9090-exec-5] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:40:44.280 DEBUG 5640 --- [http-nio-9090-exec-8] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:40:44.281 DEBUG 5640 --- [http-nio-9090-exec-8] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 15(Integer)
+2018-06-28 21:40:44.328 DEBUG 5640 --- [http-nio-9090-exec-8] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 5
+2018-06-28 21:40:44.329 DEBUG 5640 --- [http-nio-9090-exec-8] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:40:44.330 DEBUG 5640 --- [http-nio-9090-exec-8] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:40:44.375 DEBUG 5640 --- [http-nio-9090-exec-8] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:41:13.880 DEBUG 5640 --- [http-nio-9090-exec-6] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:41:13.881 DEBUG 5640 --- [http-nio-9090-exec-6] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 2(Integer)
+2018-06-28 21:41:13.925 DEBUG 5640 --- [http-nio-9090-exec-6] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:41:13.926 DEBUG 5640 --- [http-nio-9090-exec-6] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:41:13.926 DEBUG 5640 --- [http-nio-9090-exec-6] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:41:13.971 DEBUG 5640 --- [http-nio-9090-exec-6] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:41:19.038 DEBUG 5640 --- [http-nio-9090-exec-1] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:41:19.039 DEBUG 5640 --- [http-nio-9090-exec-1] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 2(Integer), 2(Integer)
+2018-06-28 21:41:19.083 DEBUG 5640 --- [http-nio-9090-exec-1] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:41:19.083 DEBUG 5640 --- [http-nio-9090-exec-1] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:41:19.084 DEBUG 5640 --- [http-nio-9090-exec-1] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:41:19.131 DEBUG 5640 --- [http-nio-9090-exec-1] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:41:21.669 DEBUG 5640 --- [http-nio-9090-exec-5] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:41:21.670 DEBUG 5640 --- [http-nio-9090-exec-5] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 4(Integer), 2(Integer)
+2018-06-28 21:41:21.714 DEBUG 5640 --- [http-nio-9090-exec-5] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 1
+2018-06-28 21:41:21.714 DEBUG 5640 --- [http-nio-9090-exec-5] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:41:21.715 DEBUG 5640 --- [http-nio-9090-exec-5] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:41:21.760 DEBUG 5640 --- [http-nio-9090-exec-5] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:41:23.172 DEBUG 5640 --- [http-nio-9090-exec-2] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:41:23.175 DEBUG 5640 --- [http-nio-9090-exec-2] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 2(Integer), 2(Integer)
+2018-06-28 21:41:23.221 DEBUG 5640 --- [http-nio-9090-exec-2] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:41:23.222 DEBUG 5640 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:41:23.224 DEBUG 5640 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:41:23.272 DEBUG 5640 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:41:23.545 DEBUG 5640 --- [http-nio-9090-exec-3] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:41:23.545 DEBUG 5640 --- [http-nio-9090-exec-3] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 2(Integer)
+2018-06-28 21:41:23.592 DEBUG 5640 --- [http-nio-9090-exec-3] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:41:23.593 DEBUG 5640 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:41:23.593 DEBUG 5640 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:41:23.637 DEBUG 5640 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:44:17.798 DEBUG 5640 --- [http-nio-9090-exec-2] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:44:17.798 DEBUG 5640 --- [http-nio-9090-exec-2] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 2(Integer)
+2018-06-28 21:44:17.843 DEBUG 5640 --- [http-nio-9090-exec-2] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:44:17.844 DEBUG 5640 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:44:17.844 DEBUG 5640 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:44:17.890 DEBUG 5640 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:45:08.436 DEBUG 5640 --- [http-nio-9090-exec-4] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:45:08.436 DEBUG 5640 --- [http-nio-9090-exec-4] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 2(Integer)
+2018-06-28 21:45:08.481 DEBUG 5640 --- [http-nio-9090-exec-4] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:45:08.481 DEBUG 5640 --- [http-nio-9090-exec-4] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:45:08.482 DEBUG 5640 --- [http-nio-9090-exec-4] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:45:08.526 DEBUG 5640 --- [http-nio-9090-exec-4] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:46:33.252 DEBUG 5640 --- [http-nio-9090-exec-1] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:46:33.253 DEBUG 5640 --- [http-nio-9090-exec-1] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 2(Integer)
+2018-06-28 21:46:33.301 DEBUG 5640 --- [http-nio-9090-exec-1] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:46:33.302 DEBUG 5640 --- [http-nio-9090-exec-1] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:46:33.302 DEBUG 5640 --- [http-nio-9090-exec-1] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:46:33.347 DEBUG 5640 --- [http-nio-9090-exec-1] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:47:51.373 DEBUG 5640 --- [http-nio-9090-exec-2] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:47:51.374 DEBUG 5640 --- [http-nio-9090-exec-2] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 2(Integer)
+2018-06-28 21:47:51.418 DEBUG 5640 --- [http-nio-9090-exec-2] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:47:51.419 DEBUG 5640 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:47:51.419 DEBUG 5640 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:47:51.463 DEBUG 5640 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:47:55.422  WARN 5640 --- [http-nio-9090-exec-3] o.s.web.servlet.PageNotFound             : Request method 'POST' not supported
+2018-06-28 21:47:55.422  WARN 5640 --- [http-nio-9090-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+2018-06-28 21:48:13.771  INFO 5640 --- [Thread-12] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@78ac8f98: startup date [Thu Jun 28 21:35:08 CST 2018]; root of context hierarchy
+2018-06-28 21:48:13.774  INFO 5640 --- [Thread-12] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-06-28 21:48:13.774  INFO 5640 --- [Thread-12] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-06-28 21:48:13.774  INFO 5640 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-06-28 21:48:13.781  INFO 5640 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-06-28 21:48:14.030  INFO 5640 --- [restartedMain] com.car.manage.CarmanageApplication      : Starting CarmanageApplication on P-V-9 with PID 5640 (D:\idea-work\carmanage\target\classes started by Administrator in D:\idea-work\carmanage)
+2018-06-28 21:48:14.031  INFO 5640 --- [restartedMain] com.car.manage.CarmanageApplication      : The following profiles are active: dev
+2018-06-28 21:48:14.033  INFO 5640 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@69eccb58: startup date [Thu Jun 28 21:48:14 CST 2018]; root of context hierarchy
+2018-06-28 21:48:14.449  INFO 5640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2018-06-28 21:48:14.450  INFO 5640 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-28 21:48:14.450  INFO 5640 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-28 21:48:14.470  INFO 5640 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-28 21:48:14.470  INFO 5640 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 437 ms
+2018-06-28 21:48:14.492  INFO 5640 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-06-28 21:48:14.492  INFO 5640 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-28 21:48:14.492  INFO 5640 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-28 21:48:14.492  INFO 5640 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-28 21:48:14.492  INFO 5640 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-28 21:48:14.562  INFO 5640 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-28 21:48:14.601  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@69eccb58: startup date [Thu Jun 28 21:48:14 CST 2018]; root of context hierarchy
+2018-06-28 21:48:14.610  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/update],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.update(com.car.manage.sys.entity.Dict)
+2018-06-28 21:48:14.610  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/delete],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.delete(com.car.manage.sys.entity.Dict)
+2018-06-28 21:48:14.611  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/list],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.list(com.car.manage.sys.entity.QueryDict)
+2018-06-28 21:48:14.611  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/save],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.save(com.car.manage.sys.entity.Dict)
+2018-06-28 21:48:14.611  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toUpdatePage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toUpdatePage(com.car.manage.sys.entity.Dict,org.springframework.ui.Model)
+2018-06-28 21:48:14.611  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toAddPage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toAddPage()
+2018-06-28 21:48:14.611  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toDictList],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toDictList()
+2018-06-28 21:48:14.611  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/getDict],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.getDict(com.car.manage.sys.entity.Dict)
+2018-06-28 21:48:14.613  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-28 21:48:14.613  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-28 21:48:14.619  INFO 5640 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-28 21:48:14.619  INFO 5640 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-28 21:48:14.706  INFO 5640 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-06-28 21:48:14.724  INFO 5640 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-28 21:48:14.725  INFO 5640 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-06-28 21:48:14.728  INFO 5640 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-06-28 21:48:14.735  INFO 5640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2018-06-28 21:48:14.736  INFO 5640 --- [restartedMain] com.car.manage.CarmanageApplication      : Started CarmanageApplication in 0.73 seconds (JVM running for 787.339)
+2018-06-28 21:48:14.739  INFO 5640 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2018-06-28 21:49:13.730  INFO 5640 --- [Thread-20] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@69eccb58: startup date [Thu Jun 28 21:48:14 CST 2018]; root of context hierarchy
+2018-06-28 21:49:13.731  INFO 5640 --- [Thread-20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-06-28 21:49:13.732  INFO 5640 --- [Thread-20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-06-28 21:49:14.016  INFO 5640 --- [restartedMain] com.car.manage.CarmanageApplication      : Starting CarmanageApplication on P-V-9 with PID 5640 (D:\idea-work\carmanage\target\classes started by Administrator in D:\idea-work\carmanage)
+2018-06-28 21:49:14.016  INFO 5640 --- [restartedMain] com.car.manage.CarmanageApplication      : The following profiles are active: dev
+2018-06-28 21:49:14.018  INFO 5640 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2024dd3d: startup date [Thu Jun 28 21:49:14 CST 2018]; root of context hierarchy
+2018-06-28 21:49:14.439  INFO 5640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2018-06-28 21:49:14.439  INFO 5640 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-28 21:49:14.440  INFO 5640 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-28 21:49:14.456  INFO 5640 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-28 21:49:14.457  INFO 5640 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 439 ms
+2018-06-28 21:49:14.477  INFO 5640 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-06-28 21:49:14.478  INFO 5640 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-28 21:49:14.478  INFO 5640 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-28 21:49:14.478  INFO 5640 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-28 21:49:14.478  INFO 5640 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-28 21:49:14.539  INFO 5640 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-28 21:49:14.574  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2024dd3d: startup date [Thu Jun 28 21:49:14 CST 2018]; root of context hierarchy
+2018-06-28 21:49:14.581  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/update],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.update(com.car.manage.sys.entity.Dict)
+2018-06-28 21:49:14.581  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/delete],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.delete(com.car.manage.sys.entity.Dict)
+2018-06-28 21:49:14.581  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/list],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.list(com.car.manage.sys.entity.QueryDict)
+2018-06-28 21:49:14.582  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/save],methods=[POST],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.save(com.car.manage.sys.entity.Dict)
+2018-06-28 21:49:14.582  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toUpdatePage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toUpdatePage(com.car.manage.sys.entity.Dict,org.springframework.ui.Model)
+2018-06-28 21:49:14.582  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toAddPage],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toAddPage()
+2018-06-28 21:49:14.582  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/toDictList],methods=[GET],produces=[application/json]}" onto public java.lang.String com.car.manage.sys.controller.DictController.toDictList()
+2018-06-28 21:49:14.582  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dict/getDict],methods=[GET],produces=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.car.manage.sys.controller.DictController.getDict(com.car.manage.sys.entity.Dict)
+2018-06-28 21:49:14.583  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-28 21:49:14.583  INFO 5640 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-28 21:49:14.590  INFO 5640 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-28 21:49:14.590  INFO 5640 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-28 21:49:14.671  INFO 5640 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-06-28 21:49:14.683  INFO 5640 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-28 21:49:14.683  INFO 5640 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-06-28 21:49:14.685  INFO 5640 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-06-28 21:49:14.692  INFO 5640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2018-06-28 21:49:14.693  INFO 5640 --- [restartedMain] com.car.manage.CarmanageApplication      : Started CarmanageApplication in 0.703 seconds (JVM running for 847.296)
+2018-06-28 21:49:14.694  INFO 5640 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2018-06-28 21:49:16.848  INFO 5640 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-28 21:49:16.849  INFO 5640 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-28 21:49:16.853  INFO 5640 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 4 ms
+2018-06-28 21:49:17.042  INFO 5640 --- [http-nio-9090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2018-06-28 21:49:32.608  INFO 5640 --- [http-nio-9090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2018-06-28 21:49:32.663 DEBUG 5640 --- [http-nio-9090-exec-3] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:49:32.664 DEBUG 5640 --- [http-nio-9090-exec-3] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 2(Integer)
+2018-06-28 21:49:32.714 DEBUG 5640 --- [http-nio-9090-exec-3] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:49:32.715 DEBUG 5640 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:49:32.715 DEBUG 5640 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:49:32.767 DEBUG 5640 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:49:39.925 DEBUG 5640 --- [http-nio-9090-exec-10] c.car.manage.sys.dao.DictDao.deleteById  : ==>  Preparing: delete from dict where id = ? 
+2018-06-28 21:49:39.925 DEBUG 5640 --- [http-nio-9090-exec-10] c.car.manage.sys.dao.DictDao.deleteById  : ==> Parameters: 5(Integer)
+2018-06-28 21:49:40.028 DEBUG 5640 --- [http-nio-9090-exec-10] c.car.manage.sys.dao.DictDao.deleteById  : <==    Updates: 1
+2018-06-28 21:49:40.257 DEBUG 5640 --- [http-nio-9090-exec-4] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:49:40.257 DEBUG 5640 --- [http-nio-9090-exec-4] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 2(Integer)
+2018-06-28 21:49:40.308 DEBUG 5640 --- [http-nio-9090-exec-4] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:49:40.308 DEBUG 5640 --- [http-nio-9090-exec-4] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:49:40.308 DEBUG 5640 --- [http-nio-9090-exec-4] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:49:40.359 DEBUG 5640 --- [http-nio-9090-exec-4] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:50:35.596 DEBUG 5640 --- [http-nio-9090-exec-3] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:50:35.596 DEBUG 5640 --- [http-nio-9090-exec-3] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 2(Integer)
+2018-06-28 21:50:35.647 DEBUG 5640 --- [http-nio-9090-exec-3] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:50:35.648 DEBUG 5640 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:50:35.648 DEBUG 5640 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:50:35.698 DEBUG 5640 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:50:47.317 DEBUG 5640 --- [http-nio-9090-exec-4] com.car.manage.sys.dao.DictDao.saveDict  : ==>  Preparing: INSERT INTO dict(code,text,type,value,is_load) VALUES(?,?,?,?,?) 
+2018-06-28 21:50:47.317 DEBUG 5640 --- [http-nio-9090-exec-4] com.car.manage.sys.dao.DictDao.saveDict  : ==> Parameters: 12121(String), 12121(String), 12(String), 12121(String), 1(String)
+2018-06-28 21:50:47.418 DEBUG 5640 --- [http-nio-9090-exec-4] com.car.manage.sys.dao.DictDao.saveDict  : <==    Updates: 1
+2018-06-28 21:50:50.736 DEBUG 5640 --- [http-nio-9090-exec-2] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:50:50.737 DEBUG 5640 --- [http-nio-9090-exec-2] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 2(Integer)
+2018-06-28 21:50:50.788 DEBUG 5640 --- [http-nio-9090-exec-2] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:50:50.790 DEBUG 5640 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:50:50.790 DEBUG 5640 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:50:50.841 DEBUG 5640 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:55:37.132 DEBUG 5640 --- [http-nio-9090-exec-6] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:55:37.132 DEBUG 5640 --- [http-nio-9090-exec-6] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 2(Integer)
+2018-06-28 21:55:37.183 DEBUG 5640 --- [http-nio-9090-exec-6] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:55:37.184 DEBUG 5640 --- [http-nio-9090-exec-6] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:55:37.184 DEBUG 5640 --- [http-nio-9090-exec-6] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:55:37.235 DEBUG 5640 --- [http-nio-9090-exec-6] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:55:48.267 DEBUG 5640 --- [http-nio-9090-exec-2] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:55:48.268 DEBUG 5640 --- [http-nio-9090-exec-2] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 2(Integer)
+2018-06-28 21:55:48.319 DEBUG 5640 --- [http-nio-9090-exec-2] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:55:48.319 DEBUG 5640 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:55:48.319 DEBUG 5640 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:55:48.370 DEBUG 5640 --- [http-nio-9090-exec-2] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:56:52.590 DEBUG 5640 --- [http-nio-9090-exec-7] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:56:52.590 DEBUG 5640 --- [http-nio-9090-exec-7] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 4(Integer)
+2018-06-28 21:56:52.643 DEBUG 5640 --- [http-nio-9090-exec-7] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 4
+2018-06-28 21:56:52.643 DEBUG 5640 --- [http-nio-9090-exec-7] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:56:52.643 DEBUG 5640 --- [http-nio-9090-exec-7] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:56:52.693 DEBUG 5640 --- [http-nio-9090-exec-7] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:59:33.561 DEBUG 5640 --- [http-nio-9090-exec-4] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 order by id desc limit ?,? 
+2018-06-28 21:59:33.562 DEBUG 5640 --- [http-nio-9090-exec-4] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 0(Integer), 2(Integer)
+2018-06-28 21:59:33.613 DEBUG 5640 --- [http-nio-9090-exec-4] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:59:33.613 DEBUG 5640 --- [http-nio-9090-exec-4] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 
+2018-06-28 21:59:33.614 DEBUG 5640 --- [http-nio-9090-exec-4] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 
+2018-06-28 21:59:33.664 DEBUG 5640 --- [http-nio-9090-exec-4] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:59:35.831 DEBUG 5640 --- [http-nio-9090-exec-9] c.c.manage.sys.dao.DictDao.getDictById   : ==>  Preparing: select * from dict where id = ? 
+2018-06-28 21:59:35.831 DEBUG 5640 --- [http-nio-9090-exec-9] c.c.manage.sys.dao.DictDao.getDictById   : ==> Parameters: 6(Integer)
+2018-06-28 21:59:35.882 DEBUG 5640 --- [http-nio-9090-exec-9] c.c.manage.sys.dao.DictDao.getDictById   : <==      Total: 1
+2018-06-28 21:59:47.816 DEBUG 5640 --- [http-nio-9090-exec-5] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 AND type like concat(?,'%') order by id desc limit ?,? 
+2018-06-28 21:59:47.816 DEBUG 5640 --- [http-nio-9090-exec-5] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 1(String), 0(Integer), 2(Integer)
+2018-06-28 21:59:47.867 DEBUG 5640 --- [http-nio-9090-exec-5] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:59:47.867 DEBUG 5640 --- [http-nio-9090-exec-5] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 AND type like concat(?,'%') 
+2018-06-28 21:59:47.867 DEBUG 5640 --- [http-nio-9090-exec-5] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 1(String)
+2018-06-28 21:59:47.918 DEBUG 5640 --- [http-nio-9090-exec-5] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:59:53.857 DEBUG 5640 --- [http-nio-9090-exec-3] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 AND type like concat(?,'%') order by id desc limit ?,? 
+2018-06-28 21:59:53.858 DEBUG 5640 --- [http-nio-9090-exec-3] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 1(String), 2(Integer), 2(Integer)
+2018-06-28 21:59:53.909 DEBUG 5640 --- [http-nio-9090-exec-3] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 1
+2018-06-28 21:59:53.909 DEBUG 5640 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 AND type like concat(?,'%') 
+2018-06-28 21:59:53.910 DEBUG 5640 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 1(String)
+2018-06-28 21:59:53.961 DEBUG 5640 --- [http-nio-9090-exec-3] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 21:59:59.689 DEBUG 5640 --- [http-nio-9090-exec-8] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 AND type like concat(?,'%') order by id desc limit ?,? 
+2018-06-28 21:59:59.690 DEBUG 5640 --- [http-nio-9090-exec-8] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 1(String), 0(Integer), 2(Integer)
+2018-06-28 21:59:59.740 DEBUG 5640 --- [http-nio-9090-exec-8] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 21:59:59.741 DEBUG 5640 --- [http-nio-9090-exec-8] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 AND type like concat(?,'%') 
+2018-06-28 21:59:59.741 DEBUG 5640 --- [http-nio-9090-exec-8] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 1(String)
+2018-06-28 21:59:59.791 DEBUG 5640 --- [http-nio-9090-exec-8] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
+2018-06-28 22:00:18.533 DEBUG 5640 --- [http-nio-9090-exec-6] c.c.manage.sys.dao.DictDao.getDictById   : ==>  Preparing: select * from dict where id = ? 
+2018-06-28 22:00:18.534 DEBUG 5640 --- [http-nio-9090-exec-6] c.c.manage.sys.dao.DictDao.getDictById   : ==> Parameters: 6(Integer)
+2018-06-28 22:00:18.584 DEBUG 5640 --- [http-nio-9090-exec-6] c.c.manage.sys.dao.DictDao.getDictById   : <==      Total: 1
+2018-06-28 22:00:22.136 DEBUG 5640 --- [http-nio-9090-exec-7] c.car.manage.sys.dao.DictDao.deleteById  : ==>  Preparing: delete from dict where id = ? 
+2018-06-28 22:00:22.137 DEBUG 5640 --- [http-nio-9090-exec-7] c.car.manage.sys.dao.DictDao.deleteById  : ==> Parameters: 6(Integer)
+2018-06-28 22:00:22.239 DEBUG 5640 --- [http-nio-9090-exec-7] c.car.manage.sys.dao.DictDao.deleteById  : <==    Updates: 1
+2018-06-28 22:00:22.453 DEBUG 5640 --- [http-nio-9090-exec-1] c.car.manage.sys.dao.DictDao.findByPage  : ==>  Preparing: SELECT * FROM dict WHERE 1=1 AND type like concat(?,'%') order by id desc limit ?,? 
+2018-06-28 22:00:22.453 DEBUG 5640 --- [http-nio-9090-exec-1] c.car.manage.sys.dao.DictDao.findByPage  : ==> Parameters: 1(String), 0(Integer), 2(Integer)
+2018-06-28 22:00:22.504 DEBUG 5640 --- [http-nio-9090-exec-1] c.car.manage.sys.dao.DictDao.findByPage  : <==      Total: 2
+2018-06-28 22:00:22.504 DEBUG 5640 --- [http-nio-9090-exec-1] com.car.manage.sys.dao.DictDao.count     : ==>  Preparing: SELECT count(*) FROM dict WHERE 1=1 AND type like concat(?,'%') 
+2018-06-28 22:00:22.504 DEBUG 5640 --- [http-nio-9090-exec-1] com.car.manage.sys.dao.DictDao.count     : ==> Parameters: 1(String)
+2018-06-28 22:00:22.555 DEBUG 5640 --- [http-nio-9090-exec-1] com.car.manage.sys.dao.DictDao.count     : <==      Total: 1
