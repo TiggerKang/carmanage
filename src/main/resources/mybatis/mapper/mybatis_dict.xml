@@ -31,7 +31,7 @@
 		delete from dict where id = #{id}
 	</delete>
 
-	<!--分页查询 code like  concat('abc','def') 相当于 code like  'abcdef '-->
+	<!--分页查询 code like  concat('abc','%') 相当于 code like  'abc% '-->
 	<select id="findByPage" parameterType="com.car.manage.sys.entity.QueryDict" resultMap="DictMap">
 		SELECT * FROM dict
 		WHERE 1=1
